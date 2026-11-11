@@ -1,0 +1,73 @@
+{
+  "n": 800,
+  "baseline_rate": 0.4062,
+  "pipeline_rate_all": 0.0587,
+  "answered": 415,
+  "declined": 385,
+  "declined_rate": 0.4813,
+  "pipeline_rate_answered": 0.1133,
+  "baseline_rate_same_answered": 0.2265,
+  "critic_unparsed_rows": 0,
+  "sweep": [
+    {
+      "min_grounding": 0,
+      "answered": 415,
+      "coverage": 0.5188,
+      "pipeline_halluc": 47,
+      "pipeline_rate_answered": 0.1133,
+      "pipeline_rate_all": 0.0587,
+      "baseline_halluc_same": 94,
+      "baseline_rate_same": 0.2265
+    },
+    {
+      "min_grounding": 1,
+      "answered": 135,
+      "coverage": 0.1688,
+      "pipeline_halluc": 2,
+      "pipeline_rate_answered": 0.0148,
+      "pipeline_rate_all": 0.0025,
+      "baseline_halluc_same": 5,
+      "baseline_rate_same": 0.037
+    },
+    {
+      "min_grounding": 2,
+      "answered": 128,
+      "coverage": 0.16,
+      "pipeline_halluc": 1,
+      "pipeline_rate_answered": 0.0078,
+      "pipeline_rate_all": 0.0013,
+      "baseline_halluc_same": 4,
+      "baseline_rate_same": 0.0312
+    },
+    {
+      "min_grounding": 3,
+      "answered": 128,
+      "coverage": 0.16,
+      "pipeline_halluc": 1,
+      "pipeline_rate_answered": 0.0078,
+      "pipeline_rate_all": 0.0013,
+      "baseline_halluc_same": 4,
+      "baseline_rate_same": 0.0312
+    },
+    {
+      "min_grounding": 4,
+      "answered": 128,
+      "coverage": 0.16,
+      "pipeline_halluc": 1,
+      "pipeline_rate_answered": 0.0078,
+      "pipeline_rate_all": 0.0013,
+      "baseline_halluc_same": 4,
+      "baseline_rate_same": 0.0312
+    },
+    {
+      "min_grounding": 5,
+      "answered": 127,
+      "coverage": 0.1588,
+      "pipeline_halluc": 1,
+      "pipeline_rate_answered": 0.0079,
+      "pipeline_rate_all": 0.0013,
+      "baseline_halluc_same": 4,
+      "baseline_rate_same": 0.0315
+    }
+  ]
+}
