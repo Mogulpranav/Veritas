@@ -35,6 +35,19 @@ The last row is the fairer comparison: it compares both systems on the same 415 
 
 Latency (24 logged runs, laptop calling Groq's free tier): p50 1.5 s, p95 2.3 s end to end.
 
+### Confidence threshold sweep
+
+Raising the minimum grounding score trades coverage for fewer unsupported answers (offline, same 800 questions):
+
+| Minimum score | Questions answered | Pipeline hallucination rate | Baseline on the same questions |
+|---|---|---|---|
+| 0 (default) | 415 (51.9%) | 11.3% | 22.7% |
+| 1 | 135 (16.9%) | 1.5% | 3.7% |
+| 2-4 | 128 (16.0%) | 0.8% | 3.1% |
+| 5 | 127 (15.9%) | 0.8% | 3.1% |
+
+Caveats: at the stricter settings only 127-135 questions are answered, so the rates rest on a handful of items (about 1-2 hallucinations). The Critic rarely produces scores 2-4, so those rows are identical. The questions it is most confident about are also ones the baseline already gets right most of the time.
+
 ## Limitations (read these before trusting the numbers)
 
 - **The evidence corpus is TruthfulQA's own reference answers.** Retrieval is therefore far easier than in a real setting, and the results are optimistic. For questions outside that set the Critic usually marks the answer unsupported and the pipeline declines. This is a demonstration of the mechanism, not a general fact checker.
